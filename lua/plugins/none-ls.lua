@@ -9,6 +9,6 @@ return {
                 -- null_ls.builtins.diagnostics.eslint_d,
 			},
 		})
-		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+		vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, {desc = "Format the code with LSP"})
 	end,
 }
