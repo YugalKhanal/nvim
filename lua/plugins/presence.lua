@@ -6,7 +6,7 @@ return {
     require("presence").setup({
       -- General options
       auto_update         = true,                     -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
-      neovim_image_text   = "I'm better", -- Text displayed when hovered over the Neovim image
+      neovim_image_text   = "Did you mean: emacs", -- Text displayed when hovered over the Neovim image
       main_image          = "neovim",                 -- Main image display (either "neovim" or "file")
       log_level           = nil,                      -- Log messages at or above this level (one of the following: "debug", "info", "warn", "error")
       debounce_timeout    = 10,                       -- Number of seconds to debounce events (or calls to `:lua package.loaded.presence:update(<filename>, true)`)
