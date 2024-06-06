@@ -11,3 +11,5 @@ vim.cmd("set clipboard+=unnamedplus")
 -- vim.cmd("set foldmethod=expr")
 -- vim.cmd("set foldexpr=nvim_treesitter#foldexpr()")
 vim.cmd("set relativenumber")
+vim.opt.termguicolors = true
+require("bufferline").setup{}

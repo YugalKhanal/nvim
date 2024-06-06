@@ -19,3 +19,4 @@ local opts = {}
 require("lazy").setup("plugins")
 require("vim-options")
 require("mappings")
+-- require("cord")
