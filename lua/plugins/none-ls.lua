@@ -6,7 +6,7 @@ return {
       sources = {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettier,
-        null_ls.builtins.diagnostics.black,
+        -- null_ls.builtins.diagnostics.black,
       },
     })
     vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, { desc = "Format the code with LSP" })
