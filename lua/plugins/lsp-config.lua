@@ -72,7 +72,7 @@ return {
         "html",
         "lua_ls",
         "pyright",
-        "asm_lsp",
+        "asm-lsp",
         "gopls",
         "ruff",
       },
