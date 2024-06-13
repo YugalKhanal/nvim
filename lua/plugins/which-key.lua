@@ -13,6 +13,7 @@ return {
         ['s'] = {name = "Search"},
         ['c'] = { name = "Code action"},
         ['sg'] = {name = "Git"},
+        ['l'] = {name = "Leetcode"},
       }, { prefix = "<leader>" })
     end,
   },
