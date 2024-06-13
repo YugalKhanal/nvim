@@ -23,7 +23,7 @@ return {
       lspconfig.tsserver.setup({
         capabilities = capabilities
       })
-     lspconfig.html.setup({
+      lspconfig.html.setup({
         capabilities = capabilities
       })
       lspconfig.lua_ls.setup({
@@ -42,10 +42,10 @@ return {
         capabilities = capabilities
       })
 
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {desc = "Show hover information"})
-      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {desc = "Go to definition"})
-      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {desc = "Find references"})
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {desc = "Code actions when hovering on a W/E"})
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show hover information" })
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Find references" })
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions when hovering on a W/E" })
     end,
   },
 }
