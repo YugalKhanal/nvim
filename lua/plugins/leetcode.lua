@@ -1,93 +1,100 @@
 return {
-  "kawre/leetcode.nvim",
-  cmd = "Leet",
-  build = ":TSUpdate html",
-  dependencies = {
-    "nvim-telescope/telescope.nvim",
-    "nvim-lua/plenary.nvim",
-    "MunifTanjim/nui.nvim",
-  },
-  opts = {
-
-    arg = "leetcode.nvim",
-
-    lang = "python3",
-
-    storage = {
-      home = vim.fn.stdpath("data") .. "/leetcode",
-      cache = vim.fn.stdpath("cache") .. "/leetcode",
+  {
+    "kawre/leetcode.nvim",
+    cmd = "Leet",
+    build = ":TSUpdate html",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
     },
+    config = function()
+      require("leetcode").setup({
+        arg = "leetcode.nvim",
 
-    plugins = {
-      non_standalone = false,
-    },
+        lang = "python3",
 
-    logging = true,
-
-    injector = {
-      ["python3"] = {
-        before = { "from typing import List", "from utils import time_function" },
-        after = {
-          'if __name__ == "__main__":',
-          "    S = Solution()",
+        storage = {
+          home = vim.fn.stdpath("data") .. "/leetcode",
+          cache = vim.fn.stdpath("cache") .. "/leetcode",
         },
-      },
-    },
 
-    cache = {
-      update_interval = 60 * 60 * 24 * 7,
-    },
+        plugins = {
+          non_standalone = false,
+        },
 
-    console = {
-      open_on_runcode = true,
+        logging = true,
 
-      dir = "row",
+        injector = {
+          ["python3"] = {
+            before = { "from typing import List", "from utils import time_function" },
+            after = {
+              'if __name__ == "__main__":',
+              "    S = Solution()",
+            },
+          },
+        },
 
-      size = {
-        width = "90%",
-        height = "75%",
-      },
+        cache = {
+          update_interval = 60 * 60 * 24 * 7,
+        },
 
-      result = {
-        size = "60%",
-      },
+        console = {
+          open_on_runcode = true,
 
-      testcase = {
-        virt_text = true,
+          dir = "row",
 
-        size = "40%",
-      },
-    },
+          size = {
+            width = "90%",
+            height = "75%",
+          },
 
-    description = {
-      position = "left",
+          result = {
+            size = "60%",
+          },
 
-      width = "40%",
+          testcase = {
+            virt_text = true,
 
-      show_stats = true,
-    },
+            size = "40%",
+          },
+        },
 
-    hooks = {
+        description = {
+          position = "left",
 
-      ["enter"] = {},
+          width = "40%",
 
-      ["question_enter"] = {},
+          show_stats = true,
+        },
 
-      ["leave"] = {},
-    },
+        hooks = {
 
-    keys = {
-      toggle = { "q" },
-      confirm = { "<CR>" },
+          ["enter"] = {},
 
-      reset_testcases = "r",
-      use_testcase = "U",
-      focus_testcases = "H",
-      focus_result = "L",
-    },
+          ["question_enter"] = {},
 
-    theme = {},
+          ["leave"] = {},
+        },
 
-    image_support = false,
-  },
+        keys = {
+          toggle = { "q" },
+          confirm = { "<CR>" },
+
+          reset_testcases = "r",
+          use_testcase = "U",
+          focus_testcases = "H",
+          focus_result = "L",
+        },
+
+        theme = {},
+
+        image_support = false,
+      })
+    end,
+
+    vim.keymap.set('n', '<leader>lc', '<CMD>Leet<CR>', {desc = 'Start leetcode'}),
+    vim.keymap.set('n', '<leader>lr', '<CMD>Leet run<CR>', {desc = 'Run solution'}),
+    vim.keymap.set('n', '<leader>ls', '<CMD>Leet submit<CR>', {desc = 'Submit solution'})
+  }
 }
