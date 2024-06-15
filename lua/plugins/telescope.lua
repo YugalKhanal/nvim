@@ -7,7 +7,7 @@ return {
             local builtin = require("telescope.builtin")
             vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "Search files project wide" })
             vim.keymap.set("n", "<leader>sw", builtin.live_grep, { desc = "Live grep project wide" })
-            vim.keymap.set("n", "<leader>th", ":Telescope colorscheme<CR>", { desc = "Change theme" })
+            vim.keymap.set("n", "<leader>th", "<CMD>Telescope colorscheme<CR>", { desc = "Change theme" })
             vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "List buffers" })
             vim.keymap.set("n", "<leader>sgc", builtin.git_commits, { desc = "Git commits" })
             vim.keymap.set("n", "<leader>sgb", builtin.git_branches, { desc = "Git branches" })

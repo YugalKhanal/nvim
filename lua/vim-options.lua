@@ -12,4 +12,5 @@ vim.cmd("set clipboard+=unnamedplus")
 -- vim.cmd("set foldexpr=nvim_treesitter#foldexpr()")
 vim.cmd("set relativenumber")
 vim.opt.termguicolors = true
-require("bufferline").setup{}
+vim.cmd("set autoindent")
+vim.opt.scrolloff = 20
