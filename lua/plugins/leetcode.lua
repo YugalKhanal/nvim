@@ -95,6 +95,10 @@ return {
 
     vim.keymap.set('n', '<leader>lc', '<CMD>Leet<CR>', {desc = 'Start leetcode'}),
     vim.keymap.set('n', '<leader>lr', '<CMD>Leet run<CR>', {desc = 'Run solution'}),
-    vim.keymap.set('n', '<leader>ls', '<CMD>Leet submit<CR>', {desc = 'Submit solution'})
+    vim.keymap.set('n', '<leader>ls', '<CMD>Leet submit<CR>', {desc = 'Submit solution'}),
+    vim.keymap.set('n', '<leader>li', '<CMD>Leet info<CR>', {desc = 'Show infor on current question'}),
+    vim.keymap.set('n', '<leader>ll', '<CMD>Leet lang<CR>', {desc = 'Change language for current question'}),
+    vim.keymap.set('n', '<leader>lp', '<CMD>Leet list<CR>', {desc = 'Open a question picker list'}),
+    vim.keymap.set('n', '<leader>ld', '<CMD>Leet daily<CR>', {desc = 'Open the leetcode daily'}),
   }
 }
