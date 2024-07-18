@@ -14,3 +14,4 @@ vim.cmd("set relativenumber")
 vim.opt.termguicolors = true
 vim.cmd("set autoindent")
 vim.opt.scrolloff = 20
+vim.cmd("set encoding=UTF-8")

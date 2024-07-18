@@ -1,23 +1,21 @@
 return {
-  {
-    "folke/which-key.nvim",
-    dependencies = {
-      "echasnovski/mini.icons"
-    },
-    keys = { "<leader>", "<c-r>", "<c-w>", '"', "'", "`", "c", "v", "g" },
-    cmd = "WhichKey",
-    config = function(_, opts)
-      vim.o.timeout = true
-      vim.o.timeoutlen = 250
-      local wk = require('which-key')
-      wk.setup(opts)
-      wk.register({
-        ['f'] = { name = "Format" },
-        ['s'] = {name = "Search"},
-        ['c'] = { name = "Code action"},
-        ['sg'] = {name = "Git"},
-        ['l'] = {name = "Leetcode"},
-      }, { prefix = "<leader>" })
-    end,
-  },
+	"folke/which-key.nvim",
+	dependencies = {
+		"echasnovski/mini.icons", version = false,
+	},
+	event = "VeryLazy",
+	opts = {
+		-- your configuration comes here
+		-- or leave it empty to use the default settings
+		-- refer to the configuration section below
+	},
+	keys = {
+		{
+			"<leader>?",
+			function()
+				require("which-key").show({ global = false })
+			end,
+			desc = "Buffer Local Keymaps (which-key)",
+		},
+	},
 }
