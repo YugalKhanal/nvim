@@ -1,4 +1,5 @@
 return {
+<<<<<<< HEAD
 	{
 		"williamboman/mason.nvim",
 		lazy = false,
@@ -69,4 +70,3 @@ return {
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions when hovering on a W/E" })
 		end,
 	},
-}
