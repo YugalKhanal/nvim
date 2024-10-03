@@ -1,5 +1,4 @@
 return {
-<<<<<<< HEAD
 	{
 		"williamboman/mason.nvim",
 		lazy = false,
@@ -13,7 +12,7 @@ return {
 		opts = {
 			auto_install = true,
 			ensure_installed = {
-				"tsserver",
+				"ts_ls",
 				"html",
 				"lua_ls",
 				"pyright",
@@ -29,7 +28,7 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.html.setup({
@@ -70,3 +69,4 @@ return {
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions when hovering on a W/E" })
 		end,
 	},
+}
