@@ -19,6 +19,7 @@ return {
 				"asm_lsp",
 				"gopls",
 				"ruff",
+        "clangd",
 			},
 		},
 	},
@@ -60,6 +61,9 @@ return {
 				},
 			})
 			lspconfig.ruff.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
 
