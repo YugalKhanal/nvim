@@ -11,7 +11,7 @@ return {
     local toggle_modes = {'n', 't'}
     local mappings = {
       { 'n', '<C-l>', function () terminal.send(ft_cmds[vim.bo.filetype]) end },
-      { toggle_modes, '<C-h>', function () terminal.toggle('horizontal') end },
+      { toggle_modes, '<leader>tr', function () terminal.toggle('horizontal') end },
       { toggle_modes, '<A-v>', function () terminal.toggle('vertical') end },
       { toggle_modes, '<A-i>', function () terminal.toggle('float') end },
     }
