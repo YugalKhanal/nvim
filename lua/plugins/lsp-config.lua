@@ -20,6 +20,7 @@ return {
 				"gopls",
 				"ruff",
         "clangd",
+        "texlab",
 			},
 		},
 	},
@@ -64,6 +65,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.clangd.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.texlab.setup({
 				capabilities = capabilities,
 			})
 
