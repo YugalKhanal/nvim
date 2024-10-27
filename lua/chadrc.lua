@@ -5,7 +5,7 @@ M.base46 = {
 }
 
 M.ui = {
-  statusline = { theme = 'vscode' },
+  statusline = {},
   tabufline = {},
 }
 
