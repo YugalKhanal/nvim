@@ -16,11 +16,12 @@ return {
 				"html",
 				"lua_ls",
 				"pyright",
-				"asm_lsp",
 				"gopls",
 				"ruff",
         "clangd",
         "texlab",
+        "nil_ls",
+        "hyprls"
 			},
 		},
 	},
@@ -40,9 +41,6 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.asm_lsp.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.gopls.setup({
@@ -70,7 +68,12 @@ return {
 			lspconfig.texlab.setup({
 				capabilities = capabilities,
 			})
-
+      lspconfig.nil_ls.setup({
+				capabilities = capabilities,
+			})
+      lspconfig.hyprls.setup({
+				capabilities = capabilities,
+			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show hover information" })
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Find references" })
