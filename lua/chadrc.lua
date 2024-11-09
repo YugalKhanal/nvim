@@ -1,12 +1,15 @@
 local M = {}
 
 M.base46 = {
-  theme = "oxocarbon",
+  -- theme = "default",
 }
 
 M.ui = {
-  statusline = {},
+  statusline = {
+    theme = "vscode_colored",
+  },
   tabufline = {},
+  transparency = true,
 }
 
 M.nvdash = {
