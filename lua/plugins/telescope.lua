@@ -28,7 +28,8 @@ return {
       require("telescope").setup({
         pickers = {
           find_files = {
-            hidden = true, -- This ensures hidden files are shown
+            hidden = true,    -- This ensures hidden files are shown
+            no_ignore = true, -- This ignores .gitignore (shows files even if they're in .gitignore)
           },
         },
         extensions = {
